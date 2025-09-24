@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Helper (Gemini)",
+  "version": "1.0.0",
+  "description": "Auto-detects YouTube video and answers questions using the transcript.",
+  "permissions": ["tabs", "storage", "scripting"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube-helper-chrome-extension-backend.onrender.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "YouTube Helper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
