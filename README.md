@@ -14,7 +14,7 @@ It provides a clean UI for interacting with the backend APIs, allowing users to 
 ---
 
 ## 🛠 Tech Stack
-- **Frontend Framework:** React / Next.js (update if using another)
+- **Frontend Framework:** React / Next.js
 - **Styling:** TailwindCSS / Bootstrap
 - **State Management:** Context API / Redux
 - **API Communication:** Axios / Fetch API
